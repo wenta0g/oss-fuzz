@@ -1245,8 +1245,7 @@ def coverage(args):  # pylint: disable=too-many-branches
         args.project.language)
     return False
 
-  if (not args.no_corpus_download and not args.corpus_dir and
-      not args.project.is_external):
+  if (not args.no_corpus_download and not args.corpus_dir):
     if not download_corpora(args):
       return False
 
